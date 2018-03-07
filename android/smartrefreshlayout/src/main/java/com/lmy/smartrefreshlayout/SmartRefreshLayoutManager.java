@@ -1,6 +1,5 @@
 package com.lmy.smartrefreshlayout;
 
-import android.content.Context;
 import android.support.annotation.NonNull;
 import android.view.View;
 
@@ -8,20 +7,15 @@ import com.facebook.react.bridge.ReadableArray;
 import com.facebook.react.common.MapBuilder;
 import com.facebook.react.uimanager.ThemedReactContext;
 import com.facebook.react.uimanager.ViewGroupManager;
-import com.facebook.react.uimanager.ViewProps;
 import com.facebook.react.uimanager.annotations.ReactProp;
 import com.facebook.react.uimanager.events.RCTEventEmitter;
-import com.scwang.smartrefresh.layout.SmartRefreshLayout;
-import com.scwang.smartrefresh.layout.api.DefaultRefreshFooterCreator;
-import com.scwang.smartrefresh.layout.api.DefaultRefreshHeaderCreator;
 import com.scwang.smartrefresh.layout.api.RefreshFooter;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
-import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
-import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.annotation.Nullable;
@@ -32,33 +26,34 @@ import javax.annotation.Nullable;
  * https://github.com/scwang90/SmartRefreshLayout
  */
 
-public class SmartRefreshLayoutManager extends ViewGroupManager<SmartRefreshLayout>{
+public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefreshLayout>{
     //返回给rn的组件名
     protected static final String REACT_CLASS="SmartRefreshLayout";
 
-    private SmartRefreshLayout smartRefreshLayout;
+    private ReactSmartRefreshLayout smartRefreshLayout;
     private RCTEventEmitter mEventEmitter;
+    private ThemedReactContext themedReactContext;
 
     private static final String COMMAND_FINISH_REFRESH_NAME="finishRefresh";
     private static final int COMMAND_FINISH_REFRESH_ID=0;
 
     static {
         //设置全局的Header构建器
-        SmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
+       /* ReactSmartRefreshLayout.setDefaultRefreshHeaderCreator(new DefaultRefreshHeaderCreator() {
             @Override
             public RefreshHeader createRefreshHeader(Context context, RefreshLayout layout) {
                 //layout.setPrimaryColorsId(R.color.colorPrimary, android.R.color.white);//全局设置主题颜色
-                return new ClassicsHeader(context);//.setTimeFormat(new DynamicTimeFormat("更新于 %s"));//指定为经典Header，默认是 贝塞尔雷达Header
+                return new ReactClassicsHeader(context).setEnableLastTime(false);//.setTimeFormat(new DynamicTimeFormat("更新于 %s"));//指定为经典Header，默认是 贝塞尔雷达Header
             }
         });
         //设置全局的Footer构建器
-        SmartRefreshLayout.setDefaultRefreshFooterCreator(new DefaultRefreshFooterCreator() {
+        ReactSmartRefreshLayout.setDefaultRefreshFooterCreator(new DefaultRefreshFooterCreator() {
             @Override
             public RefreshFooter createRefreshFooter(Context context, RefreshLayout layout) {
                 //指定为经典Footer，默认是 BallPulseFooter
-                return new ClassicsFooter(context).setDrawableSize(20);
+                return new ReactClassicsFooter(context);
             }
-        });
+        });*/
     }
 
     @Override
@@ -67,8 +62,10 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<SmartRefreshLayo
     }
 
     @Override
-    protected SmartRefreshLayout createViewInstance(ThemedReactContext reactContext) {
-        smartRefreshLayout=new SmartRefreshLayout(reactContext);
+    protected ReactSmartRefreshLayout createViewInstance(ThemedReactContext reactContext) {
+        smartRefreshLayout=new ReactSmartRefreshLayout(reactContext);
+        smartRefreshLayout.setEnableLoadMore(false);//暂时禁止上拉加载
+        themedReactContext=reactContext;
         mEventEmitter=reactContext.getJSModule(RCTEventEmitter.class);
         return smartRefreshLayout;
     }
@@ -89,9 +86,17 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<SmartRefreshLayo
                 COMMAND_FINISH_REFRESH_NAME,COMMAND_FINISH_REFRESH_ID
         );
     }
-
+    /**
+     * 是否启用下拉刷新功能
+     * @param view
+     * @param enableRefresh
+     */
+    @ReactProp(name="enableRefresh",defaultBoolean = true)
+    public void setEnableRefresh(ReactSmartRefreshLayout view,boolean enableRefresh){
+        view.setEnableRefresh(enableRefresh);
+    }
     @Override
-    public void receiveCommand(SmartRefreshLayout root, int commandId, @Nullable ReadableArray args) {
+    public void receiveCommand(ReactSmartRefreshLayout root, int commandId, @Nullable ReadableArray args) {
         switch (commandId){
             case COMMAND_FINISH_REFRESH_ID:
                 int delayed=args.getInt(0);
@@ -106,23 +111,32 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<SmartRefreshLayo
         }
     }
 
-    /**
-     * 设置是否可用
-     * @param view
-     * @param enabled
-     */
-    @ReactProp(name = ViewProps.ENABLED, defaultBoolean = true)
-    public void setEnabled(SmartRefreshLayout view, boolean enabled) {
-        view.setEnabled(enabled);
-    }
     @Override
-    public void addView(SmartRefreshLayout parent, View child, int index) {
-        parent.setRefreshContent(child);
-        //super.addView(parent, child, index);
+    public void addView(ReactSmartRefreshLayout parent, View child, int index) {
+        switch (index){
+            case 0:
+                RefreshHeader header=(RefreshHeader)child;
+                parent.setRefreshHeader(header);
+                break;
+            case 1:
+                parent.setRefreshContent(child);
+                break;
+            case 2:
+                RefreshFooter footer=(RefreshFooter)child;
+                parent.setRefreshFooter(footer);
+                break;
+            default:break;
+
+        }
     }
 
     @Override
-    protected void addEventEmitters(ThemedReactContext reactContext, SmartRefreshLayout view) {
+    public void addViews(ReactSmartRefreshLayout parent, List<View> views) {
+        super.addViews(parent, views);
+    }
+
+    @Override
+    protected void addEventEmitters(ThemedReactContext reactContext, ReactSmartRefreshLayout view) {
         view.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(@NonNull RefreshLayout refreshLayout) {

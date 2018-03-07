@@ -1,30 +1,47 @@
 import React,{Component} from 'react';
-import {StyleSheet,View,Text,ScrollView} from 'react-native';
+import {StyleSheet,View,Text,ScrollView,ToastAndroid,Button,WebView,TouchableNativeFeedback} from 'react-native';
 import PropTypes from 'prop-types';
 import SmartRefreshControl from "../SmartRefreshControl";
+import StoreHouseHeader from "../StoreHouseHeader";
 export default class RefreshExample extends Component{
+    componentDidMount(){
+
+    }
   render(){
       return(
           <ScrollView
-              style={{flex:1,height:500}}
+              style={{flex:1}}
               refreshControl={<SmartRefreshControl
+                  //headerType={'Classic'}
+                  HeaderComponent={<StoreHouseHeader
+                      textColor="green"
+                      text="1234"
+                     // lineWidth={10}
+                      //dropWidth={100}
+                      //fontSize={100}
+                  />}
+                  style={{flex:1}}
                   ref={ref=>this.smartRefresh=ref}
                   onRefresh={()=>{
-                  //alert(111)
+                      setTimeout(()=>{
+                          this.smartRefresh&&this.smartRefresh.finishRefresh({
+                              success:false
+                          })
+                      },1000)
+                      //alert(111)
                   }}
                   onLoadMore={()=>{
-                      alert(222)
+                      //alert(222)
                   }}
               />}
           >
-              <View style={{flex:1,backgroundColor:'red',height:500}}>
-                  <Text onPress={()=>{
-                      this.smartRefresh&&this.smartRefresh.finishRefresh({
-                          success:false
-                      })
-                  }}>refresh</Text>
-              </View>
+              <Button title="button" onPress={()=>{
+                  alert(111)
+              }}/>
+              <Text>dsfds</Text>
           </ScrollView>
+
+
       )
   }
 }

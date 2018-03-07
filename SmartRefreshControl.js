@@ -9,6 +9,7 @@ import {
     UIManager,
 } from 'react-native';
 import PropTypes from 'prop-types';
+import ClassicsHeader from "./ClassicsHeader";
 
 const SmartRefreshLayout = requireNativeComponent('SmartRefreshLayout', SmartRefreshControl);
 
@@ -31,12 +32,28 @@ class SmartRefreshControl extends Component {
 
         return findNodeHandle(this.refs.refreshLayout);
     }
+    renderHeader=()=>{
+        const {HeaderComponent}=this.props;
+        if(HeaderComponent){
+            return HeaderComponent;
+        }
+        return <ClassicsHeader/>
+    }
+    //TODO://还未实现
+    renderFooter=()=>{
+        return null;
+    }
     render() {
         return (
             <SmartRefreshLayout
                 ref="refreshLayout"
                 {...this.props}
-            />
+            >
+                {this.renderHeader()}
+                {this.props.children}
+                {this.renderFooter()}
+            </SmartRefreshLayout>
+
         )
     }
 }
@@ -44,7 +61,8 @@ class SmartRefreshControl extends Component {
 SmartRefreshControl.propTypes = {
     onRefresh: PropTypes.func,
     onLoadMore: PropTypes.func,
-    enabled: PropTypes.bool,
+    enableRefresh: PropTypes.bool,//是否启用下拉刷新功能
+    HeaderComponent:PropTypes.object,
     ...ViewPropTypes,
 }
 export default SmartRefreshControl;
