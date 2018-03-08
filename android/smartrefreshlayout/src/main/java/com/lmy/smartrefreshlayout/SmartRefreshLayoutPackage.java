@@ -5,6 +5,7 @@ import com.facebook.react.bridge.NativeModule;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.uimanager.ViewManager;
 import com.lmy.header.ClassicsHeaderManager;
+import com.lmy.header.MaterialHeaderManager;
 import com.lmy.header.StoreHouseHeaderManager;
 
 import java.util.Arrays;
@@ -26,7 +27,8 @@ public class SmartRefreshLayoutPackage implements ReactPackage {
         return Arrays.<ViewManager>asList(
                 new SmartRefreshLayoutManager(),
                 new ClassicsHeaderManager(),
-                new StoreHouseHeaderManager()
+                new StoreHouseHeaderManager(),
+                new MaterialHeaderManager()
                 );
     }
 }
