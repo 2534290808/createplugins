@@ -26,6 +26,8 @@ class ClassicsHeader extends Component {
 }
 
 ClassicsHeader.propTypes = {
+    primaryColor:PropTypes.string,
+    accentColor:PropTypes.string,
     ...ViewPropTypes,
 }
 export default ClassicsHeader;
