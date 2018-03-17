@@ -1,6 +1,8 @@
 package com.lmy.header;
 
 import android.content.Context;
+import android.graphics.drawable.Animatable;
+import android.graphics.drawable.Drawable;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -32,6 +34,8 @@ public class DefaultHeader extends LinearLayout implements RefreshHeader {
     protected RefreshKernel mRefreshKernel;
     protected int mBackgroundColor;
     protected int mAccentColor;
+    protected int mPaddingTop = 20;
+    protected int mPaddingBottom = 20;
 
     public DefaultHeader(Context context) {
         super(context);
@@ -82,8 +86,28 @@ public class DefaultHeader extends LinearLayout implements RefreshHeader {
     }
 
     @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        if (MeasureSpec.getMode(heightMeasureSpec) == MeasureSpec.EXACTLY) {
+            setPadding(getPaddingLeft(), 0, getPaddingRight(), 0);
+        } else {
+            setPadding(getPaddingLeft(), mPaddingTop, getPaddingRight(), mPaddingBottom);
+        }
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+    }
+
+    @Override
     public int onFinish(RefreshLayout layout, boolean success) {
-        mProgressDrawable.stop();//停止动画
+        if (mProgressDrawable != null) {
+            mProgressDrawable.stop();
+        } else {
+            Drawable drawable = mProgressView.getDrawable();
+            if (drawable instanceof Animatable) {
+                ((Animatable) drawable).stop();
+            } else {
+                mProgressView.animate().rotation(0).setDuration(300);
+            }
+        }
+        mProgressView.setVisibility(GONE);
         if (success) {
             mHeaderText.setText("刷新完成");
         } else {
@@ -141,6 +165,16 @@ public class DefaultHeader extends LinearLayout implements RefreshHeader {
     @Override
     public void onReleased(RefreshLayout refreshLayout, int height, int extendHeight) {
 
+        if (mProgressDrawable != null) {
+            mProgressDrawable.start();
+        } else {
+            Drawable drawable = mProgressView.getDrawable();
+            if (drawable instanceof Animatable) {
+                ((Animatable) drawable).start();
+            } else {
+                mProgressView.animate().rotation(36000).setDuration(100000);
+            }
+        }
     }
 
     @Override
