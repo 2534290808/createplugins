@@ -1,22 +1,3 @@
-PODS:
-  - HappyDNS (0.3.12)
-  - PLPlayerKit (3.2.1):
-    - HappyDNS (~> 0.3.10)
-    - PLPlayerKit/universal (= 3.2.1)
-  - PLPlayerKit/universal (3.2.1):
-    - HappyDNS (~> 0.3.10)
-
-DEPENDENCIES:
-  - PLPlayerKit (from `https://raw.githubusercontent.com/pili-engineering/PLPlayerKit/master/PLPlayerKit-Universal.podspec`)
-
-EXTERNAL SOURCES:
-  PLPlayerKit:
-    :podspec: https://raw.githubusercontent.com/pili-engineering/PLPlayerKit/master/PLPlayerKit-Universal.podspec
-
-SPEC CHECKSUMS:
-  HappyDNS: 691a3041128055d09866f86e6e9ca90f24da1f18
-  PLPlayerKit: b6d7560ec53884a9c94c87f2197a16b8a1d6b120
-
-PODFILE CHECKSUM: 4476494b4029ad1084919d4d4c7e6465dc28eb23
+PODFILE CHECKSUM: 6e4860d9724b3147587e815ca29ef0691b56751f
 
 COCOAPODS: 1.4.0

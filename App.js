@@ -11,8 +11,6 @@ import {
   Text,
   View,Dimensions
 } from 'react-native';
-import Player from './Player'
-import RefreshExample from "./Test/RefreshExample";
 const {width}=Dimensions.get('window')
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -26,8 +24,10 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={{flex:1}}>
-        <RefreshExample/>
-      </View>
+       {/* <Player style={{height:200}}
+                source={{
+                  uri:'rtmp://live.hkstv.hk.lxdns.com/live/hks',liveStreaming:true}}/>
+      </View>*/}</View>
     );
   }
 }

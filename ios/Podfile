@@ -6,6 +6,5 @@ target 'createplugin' do
   # use_frameworks!
 
   # Pods for createplugin
-  pod "PLPlayerKit", :podspec => 'https://raw.githubusercontent.com/pili-engineering/PLPlayerKit/master/PLPlayerKit-Universal.podspec'
 
 end

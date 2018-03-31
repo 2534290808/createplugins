@@ -7,209 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		067ACF6E517ECB7711D68F7416E90E0B /* QNLruCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 249573551AEF38A8948FE6F31101218C /* QNLruCache.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		08C01B80BAF88CC5B71CEF6F18126FDB /* QNRefresher.h in Headers */ = {isa = PBXBuildFile; fileRef = E9A2AD53E9EFAF8BE988DB67A4DBD544 /* QNRefresher.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		0E1FC7034499272A3A47D1A2897C4431 /* HappyDNS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A66D40E3F9C82ABB11E255B0731EBD7D /* HappyDNS-dummy.m */; };
-		1A26E9AF362BF9B564190A8766A306B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		1A9E04A691FEE928C4F68BBCC4ED543C /* QNIpModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 84EC3A65AED3168DC41D4BBD47EB9AD7 /* QNIpModel.m */; };
-		200F5407DA9F58BF8B09719DB34217D7 /* QNGetAddrInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 9B3E80640C4D725C8CE27951B3D277F8 /* QNGetAddrInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		217EC3738DEA93AD4023FCD9B9B7A8F6 /* QNDomain.h in Headers */ = {isa = PBXBuildFile; fileRef = DD5E4DB07B2EEDDC86AA1E365DBF1909 /* QNDomain.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		24507FBF22F60E694038ED944396975E /* QNHosts.m in Sources */ = {isa = PBXBuildFile; fileRef = D5E53384E532B28BE612875424DE3041 /* QNHosts.m */; };
-		27E9AB25EF156B1399C0693BFF99C128 /* QNTxtResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = B2F8502DCFB4CB8C953D34547BF31218 /* QNTxtResolver.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		280698E04EE618346A90A657EBB3B1E4 /* QNAssessment.h in Headers */ = {isa = PBXBuildFile; fileRef = B422607B598A377BECC60486ABC009E4 /* QNAssessment.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2EFDF6183E239C691474BBEDBB80D5A7 /* QNHijackingDetectWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 572F7B8167557274C94140773B088EE7 /* QNHijackingDetectWrapper.m */; };
-		301EB187A472BCE55850E7A62183F225 /* QNDnsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08757ABC441D9698F49C9A97DB5C5D40 /* QNDnsManager.m */; };
-		3521DEBB57138EB72DA16E5EB1DDBEF7 /* QNTxtResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 207B462941A0F505B7D068494C1A3569 /* QNTxtResolver.m */; };
-		385127F314DABEA738F334D1434CD778 /* QNDomain.m in Sources */ = {isa = PBXBuildFile; fileRef = 2635C58F2C0884560B614765AD1A216C /* QNDomain.m */; };
-		4A46E06DDA060221FC30A35532E1A652 /* QNRefresher.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC1F19633A2A79FE422E5D7F5937B54 /* QNRefresher.m */; };
-		4A485D9D13D483F6A6F0457E493B9EEF /* QNDnspodEnterprise.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EF7881BFD2A32E2A2A362125FB89D30 /* QNDnspodEnterprise.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		5839CCD4CDA7536C2D3A002E0AD246B2 /* QNDes.h in Headers */ = {isa = PBXBuildFile; fileRef = 300AA5D068CD8B368C18851EF99108E5 /* QNDes.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		65BECBAAC3E0C4145F918B5779C6A79B /* Pods-createplugin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A2D2AAA5993FF52D2D8802FEA7D9D5 /* Pods-createplugin-dummy.m */; };
-		6D77ED3359CA752AC49B4234A58FA4CC /* QNHex.h in Headers */ = {isa = PBXBuildFile; fileRef = 751592154EB9D31C6DEF6A13109937B6 /* QNHex.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		755FDA47832DC234638E40D893C1CBBA /* QNResolverDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 6809C3525FD46160BF37468089AFD863 /* QNResolverDelegate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		7CAEA14497BF3E34DCBDF595677394A2 /* QNResolver.m in Sources */ = {isa = PBXBuildFile; fileRef = 22FB39E039E69E84212EE24EAA84A82F /* QNResolver.m */; };
-		7DCE263ACE831C4628D7FB5CCD3418F8 /* QNDnspodFree.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CD0FC20732BAD82E11F47DADAE0061 /* QNDnspodFree.m */; };
-		7FD927F3BBB8599084C81EE3CD3E6FE7 /* QNAssessment.m in Sources */ = {isa = PBXBuildFile; fileRef = 7225EAF51EA31D934ED981E978D0ECC2 /* QNAssessment.m */; };
-		82255E4AE58C173BC30810F47507ADC4 /* QNHosts.h in Headers */ = {isa = PBXBuildFile; fileRef = CFEB5016A9A02B0E1E826A2B8F43464C /* QNHosts.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		84492716B0B008D595F99CA9C4E94C42 /* QNLruCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FC5FB0D9346B043CF33CEC4E8FE3E5D /* QNLruCache.m */; };
-		877FAEB088F661066BD4D4B56EC48520 /* QNResolvUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 75A73D9FD200A101B4162745A7EC9C51 /* QNResolvUtil.m */; };
-		91F89B76FBEC904FF1FCC983F56FE0C1 /* QNIpModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7EF11F12756D3DE650D890D59456F773 /* QNIpModel.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		93A3BDA65643BA9EDBE18BCBECB908B9 /* QNDes.m in Sources */ = {isa = PBXBuildFile; fileRef = 05FC18BA131BB1C3A5EB7BF232D68928 /* QNDes.m */; };
-		9D410F9DF30864D1657F988E8148291E /* QNDnsManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E3C194F0DBF12C17237BA1DDA29C1AC /* QNDnsManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		9D49D12914C3E458B9297995FFC08EC7 /* QNDnspodEnterprise.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C6F7C1F0792F2C8FF77A8D089729E6 /* QNDnspodEnterprise.m */; };
-		9F8CAEB3F1E05636E5588E202247DFB4 /* QNNetworkInfo.h in Headers */ = {isa = PBXBuildFile; fileRef = FBEBDB2F4797B30999428C6C432C221F /* QNNetworkInfo.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		A92780724D0BC15259FB0B8D4E0BC3F5 /* QNGetAddrInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F2BBCD41B86D087117359B8FBFBF1EB /* QNGetAddrInfo.m */; };
-		AE8B4FB8E915E85A9757C97FA9989E17 /* QNDnspodFree.h in Headers */ = {isa = PBXBuildFile; fileRef = 372C5B5968C4D7143E81CDB2A015AD78 /* QNDnspodFree.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C43BB1F7B91255E994C525026EB4F4B1 /* QNResolver.h in Headers */ = {isa = PBXBuildFile; fileRef = 3179BE06FCB18C492F1ED6545C88CCD7 /* QNResolver.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C56202D63A6C4455EFCB0F36FC04D046 /* QNResolvUtil.h in Headers */ = {isa = PBXBuildFile; fileRef = 232B3F497D6BCA83800BEFEAC56E50B6 /* QNResolvUtil.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		D874FEEF6904647AEFB3725E541D6A2A /* QNRecord.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB8EB8790AC93307512B82F2F349E3B /* QNRecord.m */; };
-		DB8F83042741738CAC3AE5F9AE04EA20 /* QNNetworkInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 87767F18A6ADD5B3829040A4BC875C5A /* QNNetworkInfo.m */; };
-		DF68ED152CE9FB1E0044DB34981F4B14 /* QNIP.h in Headers */ = {isa = PBXBuildFile; fileRef = 9E99272CB5CB4B4FF278EB42EE23133D /* QNIP.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		EB703BC57EDCC645DCD0228F23E5CFF5 /* QNIP.m in Sources */ = {isa = PBXBuildFile; fileRef = BF286B1FF1FA8AA360C2124D5D1B9EC7 /* QNIP.m */; };
-		EC0B72986DC01FB7B200D52EFAAAFACF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		F6B8B07922802DEBFA0D474BC5202D49 /* QNHex.m in Sources */ = {isa = PBXBuildFile; fileRef = AB2FF9BA9D26EFD396BF0831AE8E450B /* QNHex.m */; };
-		F7E08147193F79173AF186DC78FF7BF8 /* QNRecord.h in Headers */ = {isa = PBXBuildFile; fileRef = 72C2E33BFF07F338630566EBC7BDD5FF /* QNRecord.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FA41B64F266825AD97B6A87506DAFF95 /* HappyDNS.h in Headers */ = {isa = PBXBuildFile; fileRef = 324092C8A406CF8692A80F9F5890D04B /* HappyDNS.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		FC3C4F26095FC111DC872C4DE9FB5270 /* QNHijackingDetectWrapper.h in Headers */ = {isa = PBXBuildFile; fileRef = D6BBCE95DE0319F1F1639655B7127F67 /* QNHijackingDetectWrapper.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		5E55F26ACB24E5EBCF2F6D981EDEBC1C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		85BFA31A2BB579CCBFDF4D06CAED2683 /* Pods-createplugin-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A2D2AAA5993FF52D2D8802FEA7D9D5 /* Pods-createplugin-dummy.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		478A22E65176BAE6D9BB57A1147FB8EC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 53B2B897D64E4516E75AC86348B86622;
-			remoteInfo = HappyDNS;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		05FC18BA131BB1C3A5EB7BF232D68928 /* QNDes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDes.m; path = HappyDNS/Util/QNDes.m; sourceTree = "<group>"; };
-		08757ABC441D9698F49C9A97DB5C5D40 /* QNDnsManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDnsManager.m; path = HappyDNS/Common/QNDnsManager.m; sourceTree = "<group>"; };
 		0E7DCC3BA402BC1F97E18E536E7B59B0 /* Pods-createplugin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-createplugin.release.xcconfig"; sourceTree = "<group>"; };
-		0F2BBCD41B86D087117359B8FBFBF1EB /* QNGetAddrInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNGetAddrInfo.m; path = HappyDNS/Util/QNGetAddrInfo.m; sourceTree = "<group>"; };
-		1B0D598B243CAB232B2D8FD540982263 /* libHappyDNS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libHappyDNS.a; path = libHappyDNS.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		1FC5FB0D9346B043CF33CEC4E8FE3E5D /* QNLruCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNLruCache.m; path = HappyDNS/Common/QNLruCache.m; sourceTree = "<group>"; };
-		207B462941A0F505B7D068494C1A3569 /* QNTxtResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNTxtResolver.m; path = HappyDNS/Local/QNTxtResolver.m; sourceTree = "<group>"; };
-		22FB39E039E69E84212EE24EAA84A82F /* QNResolver.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNResolver.m; path = HappyDNS/Local/QNResolver.m; sourceTree = "<group>"; };
-		232B3F497D6BCA83800BEFEAC56E50B6 /* QNResolvUtil.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNResolvUtil.h; path = HappyDNS/Local/QNResolvUtil.h; sourceTree = "<group>"; };
-		249573551AEF38A8948FE6F31101218C /* QNLruCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNLruCache.h; path = HappyDNS/Common/QNLruCache.h; sourceTree = "<group>"; };
-		2635C58F2C0884560B614765AD1A216C /* QNDomain.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDomain.m; path = HappyDNS/Common/QNDomain.m; sourceTree = "<group>"; };
-		2E3C194F0DBF12C17237BA1DDA29C1AC /* QNDnsManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDnsManager.h; path = HappyDNS/Common/QNDnsManager.h; sourceTree = "<group>"; };
-		300AA5D068CD8B368C18851EF99108E5 /* QNDes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDes.h; path = HappyDNS/Util/QNDes.h; sourceTree = "<group>"; };
-		3179BE06FCB18C492F1ED6545C88CCD7 /* QNResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNResolver.h; path = HappyDNS/Local/QNResolver.h; sourceTree = "<group>"; };
-		324092C8A406CF8692A80F9F5890D04B /* HappyDNS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = HappyDNS.h; path = HappyDNS/HappyDNS.h; sourceTree = "<group>"; };
-		35F22C472F93B04497E0F6870EC192B9 /* HappyDNS.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = HappyDNS.xcconfig; sourceTree = "<group>"; };
-		372C5B5968C4D7143E81CDB2A015AD78 /* QNDnspodFree.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDnspodFree.h; path = HappyDNS/Http/QNDnspodFree.h; sourceTree = "<group>"; };
 		3D59138C85C92D35DC599ACA06410210 /* Pods-createplugin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-createplugin.debug.xcconfig"; sourceTree = "<group>"; };
 		41A2D2AAA5993FF52D2D8802FEA7D9D5 /* Pods-createplugin-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-createplugin-dummy.m"; sourceTree = "<group>"; };
 		4632F8FDE059CC6BF006E8B3DEFB1575 /* Pods-createplugin-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-createplugin-resources.sh"; sourceTree = "<group>"; };
-		46C6F7C1F0792F2C8FF77A8D089729E6 /* QNDnspodEnterprise.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDnspodEnterprise.m; path = HappyDNS/Http/QNDnspodEnterprise.m; sourceTree = "<group>"; };
-		572F7B8167557274C94140773B088EE7 /* QNHijackingDetectWrapper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNHijackingDetectWrapper.m; path = HappyDNS/Local/QNHijackingDetectWrapper.m; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		6809C3525FD46160BF37468089AFD863 /* QNResolverDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNResolverDelegate.h; path = HappyDNS/Common/QNResolverDelegate.h; sourceTree = "<group>"; };
-		6DA93555D65A5E32C0D466B58EF3DAB2 /* libPods-createplugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-createplugin.a"; path = "libPods-createplugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6EF7881BFD2A32E2A2A362125FB89D30 /* QNDnspodEnterprise.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDnspodEnterprise.h; path = HappyDNS/Http/QNDnspodEnterprise.h; sourceTree = "<group>"; };
-		7225EAF51EA31D934ED981E978D0ECC2 /* QNAssessment.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNAssessment.m; path = HappyDNS/Assessment/QNAssessment.m; sourceTree = "<group>"; };
-		72C2E33BFF07F338630566EBC7BDD5FF /* QNRecord.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNRecord.h; path = HappyDNS/Common/QNRecord.h; sourceTree = "<group>"; };
-		751592154EB9D31C6DEF6A13109937B6 /* QNHex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNHex.h; path = HappyDNS/Util/QNHex.h; sourceTree = "<group>"; };
-		75A73D9FD200A101B4162745A7EC9C51 /* QNResolvUtil.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNResolvUtil.m; path = HappyDNS/Local/QNResolvUtil.m; sourceTree = "<group>"; };
-		7EF11F12756D3DE650D890D59456F773 /* QNIpModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNIpModel.h; path = HappyDNS/Assessment/QNIpModel.h; sourceTree = "<group>"; };
-		84EC3A65AED3168DC41D4BBD47EB9AD7 /* QNIpModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNIpModel.m; path = HappyDNS/Assessment/QNIpModel.m; sourceTree = "<group>"; };
-		86301F278969EA63DB9ABFA06DED6B72 /* HappyDNS-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "HappyDNS-prefix.pch"; sourceTree = "<group>"; };
-		87767F18A6ADD5B3829040A4BC875C5A /* QNNetworkInfo.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNNetworkInfo.m; path = HappyDNS/Common/QNNetworkInfo.m; sourceTree = "<group>"; };
 		882DC963647683112975A6256EBB7346 /* Pods-createplugin-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-createplugin-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9B3E80640C4D725C8CE27951B3D277F8 /* QNGetAddrInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNGetAddrInfo.h; path = HappyDNS/Util/QNGetAddrInfo.h; sourceTree = "<group>"; };
-		9E99272CB5CB4B4FF278EB42EE23133D /* QNIP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNIP.h; path = HappyDNS/Util/QNIP.h; sourceTree = "<group>"; };
-		A0CD0FC20732BAD82E11F47DADAE0061 /* QNDnspodFree.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNDnspodFree.m; path = HappyDNS/Http/QNDnspodFree.m; sourceTree = "<group>"; };
-		A66D40E3F9C82ABB11E255B0731EBD7D /* HappyDNS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "HappyDNS-dummy.m"; sourceTree = "<group>"; };
+		A1B55EE339AA9DA78E4D12AE31DE132C /* libPods-createplugin.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-createplugin.a"; path = "libPods-createplugin.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB0518338A9BF4638E40EB33C2570B24 /* Pods-createplugin-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-createplugin-acknowledgements.plist"; sourceTree = "<group>"; };
-		AB2FF9BA9D26EFD396BF0831AE8E450B /* QNHex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNHex.m; path = HappyDNS/Util/QNHex.m; sourceTree = "<group>"; };
-		B2F8502DCFB4CB8C953D34547BF31218 /* QNTxtResolver.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNTxtResolver.h; path = HappyDNS/Local/QNTxtResolver.h; sourceTree = "<group>"; };
-		B422607B598A377BECC60486ABC009E4 /* QNAssessment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNAssessment.h; path = HappyDNS/Assessment/QNAssessment.h; sourceTree = "<group>"; };
-		BAC1F19633A2A79FE422E5D7F5937B54 /* QNRefresher.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNRefresher.m; path = HappyDNS/QNRefresher.m; sourceTree = "<group>"; };
-		BF286B1FF1FA8AA360C2124D5D1B9EC7 /* QNIP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNIP.m; path = HappyDNS/Util/QNIP.m; sourceTree = "<group>"; };
-		CFEB5016A9A02B0E1E826A2B8F43464C /* QNHosts.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNHosts.h; path = HappyDNS/Local/QNHosts.h; sourceTree = "<group>"; };
-		D5E53384E532B28BE612875424DE3041 /* QNHosts.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNHosts.m; path = HappyDNS/Local/QNHosts.m; sourceTree = "<group>"; };
-		D6BBCE95DE0319F1F1639655B7127F67 /* QNHijackingDetectWrapper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNHijackingDetectWrapper.h; path = HappyDNS/Local/QNHijackingDetectWrapper.h; sourceTree = "<group>"; };
-		DD5E4DB07B2EEDDC86AA1E365DBF1909 /* QNDomain.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNDomain.h; path = HappyDNS/Common/QNDomain.h; sourceTree = "<group>"; };
-		DFB8EB8790AC93307512B82F2F349E3B /* QNRecord.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QNRecord.m; path = HappyDNS/Common/QNRecord.m; sourceTree = "<group>"; };
-		E9A2AD53E9EFAF8BE988DB67A4DBD544 /* QNRefresher.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNRefresher.h; path = HappyDNS/QNRefresher.h; sourceTree = "<group>"; };
-		ECD42AB84435D5E54B87959BAAE4A233 /* PLPlayerKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PLPlayerKit.framework; path = "Pod/Library-Universal/PLPlayerKit.framework"; sourceTree = "<group>"; };
 		EF03C807D1CD15F41E046290831B6A32 /* Pods-createplugin-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-createplugin-acknowledgements.markdown"; sourceTree = "<group>"; };
-		FBEBDB2F4797B30999428C6C432C221F /* QNNetworkInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QNNetworkInfo.h; path = HappyDNS/Common/QNNetworkInfo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		22EB769A61BFBACFB541A82F242C2C6A /* Frameworks */ = {
+		4C4D436800F61035A561929354AF2541 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A26E9AF362BF9B564190A8766A306B5 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B4713DBD5B45C5BC453596BA44047A6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EC0B72986DC01FB7B200D52EFAAAFACF /* Foundation.framework in Frameworks */,
+				5E55F26ACB24E5EBCF2F6D981EDEBC1C /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		09DF6B255992614EF654600138A304B8 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				186DDC966EFCEDF7D9FDBC9EF63617E1 /* HappyDNS */,
-				E1EE8BD47B94355ABA2D78822CD1ABE4 /* PLPlayerKit */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		0FC11B72468D156AA9B6EAEA7A8CD8A8 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				35F22C472F93B04497E0F6870EC192B9 /* HappyDNS.xcconfig */,
-				A66D40E3F9C82ABB11E255B0731EBD7D /* HappyDNS-dummy.m */,
-				86301F278969EA63DB9ABFA06DED6B72 /* HappyDNS-prefix.pch */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/HappyDNS";
-			sourceTree = "<group>";
-		};
-		186DDC966EFCEDF7D9FDBC9EF63617E1 /* HappyDNS */ = {
-			isa = PBXGroup;
-			children = (
-				324092C8A406CF8692A80F9F5890D04B /* HappyDNS.h */,
-				B422607B598A377BECC60486ABC009E4 /* QNAssessment.h */,
-				7225EAF51EA31D934ED981E978D0ECC2 /* QNAssessment.m */,
-				300AA5D068CD8B368C18851EF99108E5 /* QNDes.h */,
-				05FC18BA131BB1C3A5EB7BF232D68928 /* QNDes.m */,
-				2E3C194F0DBF12C17237BA1DDA29C1AC /* QNDnsManager.h */,
-				08757ABC441D9698F49C9A97DB5C5D40 /* QNDnsManager.m */,
-				6EF7881BFD2A32E2A2A362125FB89D30 /* QNDnspodEnterprise.h */,
-				46C6F7C1F0792F2C8FF77A8D089729E6 /* QNDnspodEnterprise.m */,
-				372C5B5968C4D7143E81CDB2A015AD78 /* QNDnspodFree.h */,
-				A0CD0FC20732BAD82E11F47DADAE0061 /* QNDnspodFree.m */,
-				DD5E4DB07B2EEDDC86AA1E365DBF1909 /* QNDomain.h */,
-				2635C58F2C0884560B614765AD1A216C /* QNDomain.m */,
-				9B3E80640C4D725C8CE27951B3D277F8 /* QNGetAddrInfo.h */,
-				0F2BBCD41B86D087117359B8FBFBF1EB /* QNGetAddrInfo.m */,
-				751592154EB9D31C6DEF6A13109937B6 /* QNHex.h */,
-				AB2FF9BA9D26EFD396BF0831AE8E450B /* QNHex.m */,
-				D6BBCE95DE0319F1F1639655B7127F67 /* QNHijackingDetectWrapper.h */,
-				572F7B8167557274C94140773B088EE7 /* QNHijackingDetectWrapper.m */,
-				CFEB5016A9A02B0E1E826A2B8F43464C /* QNHosts.h */,
-				D5E53384E532B28BE612875424DE3041 /* QNHosts.m */,
-				9E99272CB5CB4B4FF278EB42EE23133D /* QNIP.h */,
-				BF286B1FF1FA8AA360C2124D5D1B9EC7 /* QNIP.m */,
-				7EF11F12756D3DE650D890D59456F773 /* QNIpModel.h */,
-				84EC3A65AED3168DC41D4BBD47EB9AD7 /* QNIpModel.m */,
-				249573551AEF38A8948FE6F31101218C /* QNLruCache.h */,
-				1FC5FB0D9346B043CF33CEC4E8FE3E5D /* QNLruCache.m */,
-				FBEBDB2F4797B30999428C6C432C221F /* QNNetworkInfo.h */,
-				87767F18A6ADD5B3829040A4BC875C5A /* QNNetworkInfo.m */,
-				72C2E33BFF07F338630566EBC7BDD5FF /* QNRecord.h */,
-				DFB8EB8790AC93307512B82F2F349E3B /* QNRecord.m */,
-				E9A2AD53E9EFAF8BE988DB67A4DBD544 /* QNRefresher.h */,
-				BAC1F19633A2A79FE422E5D7F5937B54 /* QNRefresher.m */,
-				3179BE06FCB18C492F1ED6545C88CCD7 /* QNResolver.h */,
-				22FB39E039E69E84212EE24EAA84A82F /* QNResolver.m */,
-				6809C3525FD46160BF37468089AFD863 /* QNResolverDelegate.h */,
-				232B3F497D6BCA83800BEFEAC56E50B6 /* QNResolvUtil.h */,
-				75A73D9FD200A101B4162745A7EC9C51 /* QNResolvUtil.m */,
-				B2F8502DCFB4CB8C953D34547BF31218 /* QNTxtResolver.h */,
-				207B462941A0F505B7D068494C1A3569 /* QNTxtResolver.m */,
-				0FC11B72468D156AA9B6EAEA7A8CD8A8 /* Support Files */,
-			);
-			name = HappyDNS;
-			path = HappyDNS;
-			sourceTree = "<group>";
-		};
 		2CFFF7FA581138056710A66D9E872B7C /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,27 +44,10 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		6F896FE39D2F594EC0556CEC3EF628C7 /* Frameworks */ = {
+		6A2DDD6957DB36D9083B0A5F17CDF435 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ECD42AB84435D5E54B87959BAAE4A233 /* PLPlayerKit.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		70FADC1A007C166C444C4194DE9E40B5 /* universal */ = {
-			isa = PBXGroup;
-			children = (
-				6F896FE39D2F594EC0556CEC3EF628C7 /* Frameworks */,
-			);
-			name = universal;
-			sourceTree = "<group>";
-		};
-		7A50394F99C69F25AB6115266CC8C428 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				1B0D598B243CAB232B2D8FD540982263 /* libHappyDNS.a */,
-				6DA93555D65A5E32C0D466B58EF3DAB2 /* libPods-createplugin.a */,
+				A1B55EE339AA9DA78E4D12AE31DE132C /* libPods-createplugin.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,8 +57,7 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				09DF6B255992614EF654600138A304B8 /* Pods */,
-				7A50394F99C69F25AB6115266CC8C428 /* Products */,
+				6A2DDD6957DB36D9083B0A5F17CDF435 /* Products */,
 				2CFFF7FA581138056710A66D9E872B7C /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -285,81 +93,23 @@
 			path = "Target Support Files/Pods-createplugin";
 			sourceTree = "<group>";
 		};
-		E1EE8BD47B94355ABA2D78822CD1ABE4 /* PLPlayerKit */ = {
-			isa = PBXGroup;
-			children = (
-				70FADC1A007C166C444C4194DE9E40B5 /* universal */,
-			);
-			name = PLPlayerKit;
-			path = PLPlayerKit;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		9BE3EF54FFD4512024472C65FC4F0C22 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FA41B64F266825AD97B6A87506DAFF95 /* HappyDNS.h in Headers */,
-				280698E04EE618346A90A657EBB3B1E4 /* QNAssessment.h in Headers */,
-				5839CCD4CDA7536C2D3A002E0AD246B2 /* QNDes.h in Headers */,
-				9D410F9DF30864D1657F988E8148291E /* QNDnsManager.h in Headers */,
-				4A485D9D13D483F6A6F0457E493B9EEF /* QNDnspodEnterprise.h in Headers */,
-				AE8B4FB8E915E85A9757C97FA9989E17 /* QNDnspodFree.h in Headers */,
-				217EC3738DEA93AD4023FCD9B9B7A8F6 /* QNDomain.h in Headers */,
-				200F5407DA9F58BF8B09719DB34217D7 /* QNGetAddrInfo.h in Headers */,
-				6D77ED3359CA752AC49B4234A58FA4CC /* QNHex.h in Headers */,
-				FC3C4F26095FC111DC872C4DE9FB5270 /* QNHijackingDetectWrapper.h in Headers */,
-				82255E4AE58C173BC30810F47507ADC4 /* QNHosts.h in Headers */,
-				DF68ED152CE9FB1E0044DB34981F4B14 /* QNIP.h in Headers */,
-				91F89B76FBEC904FF1FCC983F56FE0C1 /* QNIpModel.h in Headers */,
-				067ACF6E517ECB7711D68F7416E90E0B /* QNLruCache.h in Headers */,
-				9F8CAEB3F1E05636E5588E202247DFB4 /* QNNetworkInfo.h in Headers */,
-				F7E08147193F79173AF186DC78FF7BF8 /* QNRecord.h in Headers */,
-				08C01B80BAF88CC5B71CEF6F18126FDB /* QNRefresher.h in Headers */,
-				C43BB1F7B91255E994C525026EB4F4B1 /* QNResolver.h in Headers */,
-				755FDA47832DC234638E40D893C1CBBA /* QNResolverDelegate.h in Headers */,
-				C56202D63A6C4455EFCB0F36FC04D046 /* QNResolvUtil.h in Headers */,
-				27E9AB25EF156B1399C0693BFF99C128 /* QNTxtResolver.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
-		4562F23F6A601118A0EADF8E37D70203 /* Pods-createplugin */ = {
+		CE8EDA7D35E576BC809ED969FEE7CA64 /* Pods-createplugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 492E123586886BAE1AEF1E4284670EEE /* Build configuration list for PBXNativeTarget "Pods-createplugin" */;
+			buildConfigurationList = 95CF86D6AA9AFDD6A646D0CE6AD409D8 /* Build configuration list for PBXNativeTarget "Pods-createplugin" */;
 			buildPhases = (
-				21007559CD7DEFD23DA7883C00456398 /* Sources */,
-				3B4713DBD5B45C5BC453596BA44047A6 /* Frameworks */,
+				BB35AA41F485AB309AEC5DE849136B4A /* Sources */,
+				4C4D436800F61035A561929354AF2541 /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DC1DC9A4F57183C325A9DD750DE446A3 /* PBXTargetDependency */,
 			);
 			name = "Pods-createplugin";
 			productName = "Pods-createplugin";
-			productReference = 6DA93555D65A5E32C0D466B58EF3DAB2 /* libPods-createplugin.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		53B2B897D64E4516E75AC86348B86622 /* HappyDNS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 94BE476B385275A61F0E978B4D197362 /* Build configuration list for PBXNativeTarget "HappyDNS" */;
-			buildPhases = (
-				22C10CD95C9A0F4C7FE383C22490BA8D /* Sources */,
-				22EB769A61BFBACFB541A82F242C2C6A /* Frameworks */,
-				9BE3EF54FFD4512024472C65FC4F0C22 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = HappyDNS;
-			productName = HappyDNS;
-			productReference = 1B0D598B243CAB232B2D8FD540982263 /* libHappyDNS.a */;
+			productReference = A1B55EE339AA9DA78E4D12AE31DE132C /* libPods-createplugin.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -379,108 +129,28 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 7A50394F99C69F25AB6115266CC8C428 /* Products */;
+			productRefGroup = 6A2DDD6957DB36D9083B0A5F17CDF435 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				53B2B897D64E4516E75AC86348B86622 /* HappyDNS */,
-				4562F23F6A601118A0EADF8E37D70203 /* Pods-createplugin */,
+				CE8EDA7D35E576BC809ED969FEE7CA64 /* Pods-createplugin */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		21007559CD7DEFD23DA7883C00456398 /* Sources */ = {
+		BB35AA41F485AB309AEC5DE849136B4A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65BECBAAC3E0C4145F918B5779C6A79B /* Pods-createplugin-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		22C10CD95C9A0F4C7FE383C22490BA8D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E1FC7034499272A3A47D1A2897C4431 /* HappyDNS-dummy.m in Sources */,
-				7FD927F3BBB8599084C81EE3CD3E6FE7 /* QNAssessment.m in Sources */,
-				93A3BDA65643BA9EDBE18BCBECB908B9 /* QNDes.m in Sources */,
-				301EB187A472BCE55850E7A62183F225 /* QNDnsManager.m in Sources */,
-				9D49D12914C3E458B9297995FFC08EC7 /* QNDnspodEnterprise.m in Sources */,
-				7DCE263ACE831C4628D7FB5CCD3418F8 /* QNDnspodFree.m in Sources */,
-				385127F314DABEA738F334D1434CD778 /* QNDomain.m in Sources */,
-				A92780724D0BC15259FB0B8D4E0BC3F5 /* QNGetAddrInfo.m in Sources */,
-				F6B8B07922802DEBFA0D474BC5202D49 /* QNHex.m in Sources */,
-				2EFDF6183E239C691474BBEDBB80D5A7 /* QNHijackingDetectWrapper.m in Sources */,
-				24507FBF22F60E694038ED944396975E /* QNHosts.m in Sources */,
-				EB703BC57EDCC645DCD0228F23E5CFF5 /* QNIP.m in Sources */,
-				1A9E04A691FEE928C4F68BBCC4ED543C /* QNIpModel.m in Sources */,
-				84492716B0B008D595F99CA9C4E94C42 /* QNLruCache.m in Sources */,
-				DB8F83042741738CAC3AE5F9AE04EA20 /* QNNetworkInfo.m in Sources */,
-				D874FEEF6904647AEFB3725E541D6A2A /* QNRecord.m in Sources */,
-				4A46E06DDA060221FC30A35532E1A652 /* QNRefresher.m in Sources */,
-				7CAEA14497BF3E34DCBDF595677394A2 /* QNResolver.m in Sources */,
-				877FAEB088F661066BD4D4B56EC48520 /* QNResolvUtil.m in Sources */,
-				3521DEBB57138EB72DA16E5EB1DDBEF7 /* QNTxtResolver.m in Sources */,
+				85BFA31A2BB579CCBFDF4D06CAED2683 /* Pods-createplugin-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		DC1DC9A4F57183C325A9DD750DE446A3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = HappyDNS;
-			target = 53B2B897D64E4516E75AC86348B86622 /* HappyDNS */;
-			targetProxy = 478A22E65176BAE6D9BB57A1147FB8EC /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		48501F195AE4D2D5B559868083A5C1C9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35F22C472F93B04497E0F6870EC192B9 /* HappyDNS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/HappyDNS/HappyDNS-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		651E3ABA347315B7F57DBA47733E3977 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 35F22C472F93B04497E0F6870EC192B9 /* HappyDNS.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				GCC_PREFIX_HEADER = "Target Support Files/HappyDNS/HappyDNS-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		AFB7E751C1FBD24D010E5FD64AFD340D /* Debug */ = {
+		92BCA6732ECA4281EB5FA1A088CD51FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3D59138C85C92D35DC599ACA06410210 /* Pods-createplugin.debug.xcconfig */;
 			buildSettings = {
@@ -563,27 +233,6 @@
 			};
 			name = Debug;
 		};
-		C92B2213E811BC9A5520A34EA732AB9C /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0E7DCC3BA402BC1F97E18E536E7B59B0 /* Pods-createplugin.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		DA03565BE765DB55C6448FB363A44481 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -642,6 +291,27 @@
 			};
 			name = Release;
 		};
+		EF6F1EA2FEB865DCB543C0194423925D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E7DCC3BA402BC1F97E18E536E7B59B0 /* Pods-createplugin.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -654,20 +324,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		492E123586886BAE1AEF1E4284670EEE /* Build configuration list for PBXNativeTarget "Pods-createplugin" */ = {
+		95CF86D6AA9AFDD6A646D0CE6AD409D8 /* Build configuration list for PBXNativeTarget "Pods-createplugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				AFB7E751C1FBD24D010E5FD64AFD340D /* Debug */,
-				C92B2213E811BC9A5520A34EA732AB9C /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		94BE476B385275A61F0E978B4D197362 /* Build configuration list for PBXNativeTarget "HappyDNS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				651E3ABA347315B7F57DBA47733E3977 /* Debug */,
-				48501F195AE4D2D5B559868083A5C1C9 /* Release */,
+				92BCA6732ECA4281EB5FA1A088CD51FF /* Debug */,
+				EF6F1EA2FEB865DCB543C0194423925D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
