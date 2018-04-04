@@ -133,7 +133,7 @@ public class Switch extends View implements Checkable {
 
         checkLineLength = dp2px(6);
 
-        buttonColor = optColor(typedArray,
+        int buttonColor = optColor(typedArray,
                 R.styleable.SwitchButton_sb_button_color,
                 Color.WHITE);//Color.WHITE;
 
@@ -854,10 +854,6 @@ public class Switch extends View implements Checkable {
      * 背景底色
      */
     private int background;
-    /**
-     * 按钮颜色
-     */
-    private int buttonColor;
     /**
      * 背景关闭颜色
      */
