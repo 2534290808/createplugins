@@ -11,6 +11,7 @@ import {
   Text,
   View,Dimensions
 } from 'react-native';
+import Switch from "./Switch";
 const {width}=Dimensions.get('window')
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -21,9 +22,18 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  state={
+    value:false
+  }
   render() {
     return (
-      <View style={{flex:1}}>
+      <View style={{flex:1,paddingTop:20}}>
+        <Switch value={this.state.value} onValueChange={value=>{
+          //alert(value)
+          this.setState({
+              value
+          })
+        }} style={{width:51,height:31}}/>
        {/* <Player style={{height:200}}
                 source={{
                   uri:'rtmp://live.hkstv.hk.lxdns.com/live/hks',liveStreaming:true}}/>
