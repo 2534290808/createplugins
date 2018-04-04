@@ -30,7 +30,7 @@ class Switch extends Component {
         props.onSwitchButtonChange=this._onValueChange;
         props.checkedColor=this.props.onTintColor;
         props.buttonColor=this.props.thumbTintColor;
-        props.enabled=this.props.disabled
+        props.enabled=!this.props.disabled
         return (
             <RCTSwitchButton
                 {...props}

@@ -541,9 +541,8 @@ public class Switch extends View implements Checkable {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        if(!isEnabled()){return false;}
+        if(!this.isEnabled()){return false;}
         int actionMasked = event.getActionMasked();
-
         switch (actionMasked){
             case MotionEvent.ACTION_DOWN:{
                 isTouchingDown = true;
