@@ -9,35 +9,30 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View,Dimensions
+  View,Dimensions,Button
 } from 'react-native';
 import Switch from "./Switch";
 const {width}=Dimensions.get('window')
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' +
-    'Cmd+D or shake for dev menu',
-  android: 'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-
+import BaiduSpeech from './BaiduSpeech'
+const AppId = "11065190";
+const AppKey = "3l4iQeGS9yqXscBHpc7rhlWn";
+const AppSecret = "mfpIymVMu3zok9VKUkTDkbkz9GogW3sO";
 type Props = {};
 export default class App extends Component<Props> {
   state={
     value:false
   }
+  constructor(){
+    super();
+    BaiduSpeech.init(AppId,AppKey,AppSecret);
+  }
   render() {
     return (
       <View style={{flex:1,paddingTop:20}}>
-        <Switch value={this.state.value} onValueChange={value=>{
-          //alert(value)
-          this.setState({
-              value
-          })
-        }} style={{width:51,height:31}}/>
-       {/* <Player style={{height:200}}
-                source={{
-                  uri:'rtmp://live.hkstv.hk.lxdns.com/live/hks',liveStreaming:true}}/>
-      </View>*/}</View>
+        <Button title="开说" onPress={()=>{
+          BaiduSpeech.speak('习近平总书记曾多次说过')
+        }}/>
+      </View>
     );
   }
 }
