@@ -4,11 +4,11 @@ import android.app.Application;
 
 import com.example.com.baiduspeech.BaiduSpeechPackage;
 import com.facebook.react.ReactApplication;
+import com.airbnb.android.react.lottie.LottiePackage;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.shell.MainReactPackage;
 import com.facebook.soloader.SoLoader;
-import com.lmy.piliplayer.PiliPackage;
 import com.lmy.smartrefreshlayout.SmartRefreshLayoutPackage;
 import com.lmy.switchbutton.SwitchPackage;
 
@@ -26,7 +26,8 @@ public class MainApplication extends Application implements ReactApplication {
     @Override
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),new PiliPackage(),new SmartRefreshLayoutPackage(),new SwitchPackage(),
+          new MainReactPackage(),
+            new LottiePackage(),new SmartRefreshLayoutPackage(),new SwitchPackage(),
               new BaiduSpeechPackage()
       );
     }

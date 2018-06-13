@@ -14,6 +14,9 @@ import {
 import Switch from "./Switch";
 const {width}=Dimensions.get('window')
 import BaiduSpeech from './BaiduSpeech'
+import RefreshExample from "./Test/RefreshExample";
+import PullRefreshExample from "./Test/PullRefreshExample";
+import LottieExample from "./Test/LottieExample";
 const AppId = "11065190";
 const AppKey = "3l4iQeGS9yqXscBHpc7rhlWn";
 const AppSecret = "mfpIymVMu3zok9VKUkTDkbkz9GogW3sO";
@@ -28,11 +31,8 @@ export default class App extends Component<Props> {
   }
   render() {
     return (
-      <View style={{flex:1,paddingTop:20}}>
-        <Button title="开说" onPress={()=>{
-          BaiduSpeech.speak('习近平总书记曾多次说过')
-        }}/>
-      </View>
+      <RefreshExample
+      />
     );
   }
 }
