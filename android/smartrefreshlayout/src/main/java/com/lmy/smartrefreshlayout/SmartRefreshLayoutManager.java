@@ -19,6 +19,7 @@ import com.lmy.header.AnyHeader;
 import com.scwang.smartrefresh.header.waveswipe.DisplayUtil;
 import com.scwang.smartrefresh.layout.api.RefreshFooter;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
+import com.scwang.smartrefresh.layout.api.RefreshInternal;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.RefreshState;
 import com.scwang.smartrefresh.layout.listener.OnLoadMoreListener;
@@ -58,6 +59,7 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
     protected ReactSmartRefreshLayout createViewInstance(ThemedReactContext reactContext) {
         smartRefreshLayout=new ReactSmartRefreshLayout(reactContext);
         smartRefreshLayout.setEnableLoadMore(false);//暂时禁止上拉加载
+        smartRefreshLayout.setEnablePureScrollMode(true);
         themedReactContext=reactContext;
         mEventEmitter=reactContext.getJSModule(RCTEventEmitter.class);
         return smartRefreshLayout;
@@ -80,6 +82,15 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
         );
     }
 
+    /**
+     * 设置为纯滚动
+     * @param view
+     * @param pureScroll
+     */
+    @ReactProp(name = "pureScroll",defaultBoolean = false)
+    public void setPureScroll(ReactSmartRefreshLayout view,boolean pureScroll){
+        view.setEnablePureScrollMode(pureScroll);
+    }
     /**
      * 通过RefreshLayout设置主题色
      * @param view
