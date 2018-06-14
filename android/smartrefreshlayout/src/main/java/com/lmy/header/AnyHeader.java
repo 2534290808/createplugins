@@ -4,34 +4,35 @@ import android.content.Context;
 import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.view.View;
-import android.widget.RelativeLayout;
 
+import com.facebook.react.views.view.ReactViewGroup;
 import com.scwang.smartrefresh.layout.api.RefreshHeader;
 import com.scwang.smartrefresh.layout.api.RefreshKernel;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.constant.RefreshState;
 import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
+import com.scwang.smartrefresh.layout.util.DensityUtil;
 
 /**anyview
  * Created by painter.g on 2018/3/9.
  */
 
-public class AnyHeader extends RelativeLayout implements RefreshHeader {
+public class AnyHeader extends ReactViewGroup implements RefreshHeader {
     private RefreshKernel mRefreshKernel;
     private int mBackgroundColor;
     private SpinnerStyle mSpinnerStyle = SpinnerStyle.Translate;
 
     public AnyHeader(Context context) {
         super(context);
-        //initView(context);
+        initView(context);
     }
     @Override
     public void onInitialized(@NonNull RefreshKernel kernel, int height, int extendHeight) {
         mRefreshKernel = kernel;
-       mRefreshKernel.requestDrawBackgroundForHeader(mBackgroundColor);
+        mRefreshKernel.requestDrawBackgroundForHeader(mBackgroundColor);
     }
     private void initView(Context context) {
-        //setMinimumHeight(DensityUtil.dp2px(60));
+        setMinimumHeight(DensityUtil.dp2px(60));
     }
     public void setView(View v){
         addView(v);
