@@ -59,7 +59,6 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
     protected ReactSmartRefreshLayout createViewInstance(ThemedReactContext reactContext) {
         smartRefreshLayout=new ReactSmartRefreshLayout(reactContext);
         smartRefreshLayout.setEnableLoadMore(false);//暂时禁止上拉加载
-        smartRefreshLayout.setEnablePureScrollMode(true);
         themedReactContext=reactContext;
         mEventEmitter=reactContext.getJSModule(RCTEventEmitter.class);
         return smartRefreshLayout;
@@ -193,6 +192,19 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
 
     @Override
     protected void addEventEmitters(ThemedReactContext reactContext, ReactSmartRefreshLayout view) {
+        /**
+         * 必须设置OnRefreshListener，如果没有设置，
+         * 则会自动触发finishRefresh
+         *
+         * OnRefreshListener和OnSimpleMultiPurposeListener
+         * 中的onRefresh都会触发刷新，只需写一个即可
+         */
+        view.setOnRefreshListener(new OnRefreshListener() {
+            @Override
+            public void onRefresh(RefreshLayout refreshLayout) {
+
+            }
+        });
         view.setOnMultiPurposeListener(new SimpleMultiPurposeListener() {
             @Override
             public void onHeaderPulling(RefreshHeader header, float percent, int offset, int headerHeight, int extendHeight) {
