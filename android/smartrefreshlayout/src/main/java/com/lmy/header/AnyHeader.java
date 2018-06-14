@@ -19,9 +19,11 @@ import com.scwang.smartrefresh.layout.constant.SpinnerStyle;
 public class AnyHeader extends RelativeLayout implements RefreshHeader {
     private RefreshKernel mRefreshKernel;
     private int mBackgroundColor;
+    private SpinnerStyle mSpinnerStyle = SpinnerStyle.Translate;
 
     public AnyHeader(Context context) {
         super(context);
+        //initView(context);
     }
     @Override
     public void onInitialized(@NonNull RefreshKernel kernel, int height, int extendHeight) {
@@ -41,7 +43,7 @@ public class AnyHeader extends RelativeLayout implements RefreshHeader {
 
     @Override
     public SpinnerStyle getSpinnerStyle() {
-        return SpinnerStyle.Translate;//指定为平移，不能null
+        return this.mSpinnerStyle;//指定为平移，不能null
     }
 
     @Override
@@ -57,6 +59,10 @@ public class AnyHeader extends RelativeLayout implements RefreshHeader {
         return this;
     }
 
+    public AnyHeader setSpinnerStyle(SpinnerStyle style){
+        this.mSpinnerStyle = style;
+        return this;
+    }
     @Override
     public void onPulling(float percent, int offset, int height, int extendHeight) {
 
