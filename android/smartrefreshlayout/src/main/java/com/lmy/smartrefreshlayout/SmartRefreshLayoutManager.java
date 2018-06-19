@@ -217,7 +217,9 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
 
             @Override
             public void onHeaderReleased(RefreshHeader header, int headerHeight, int extendHeight) {
-
+                WritableMap writableMap = Arguments.createMap();
+                writableMap.putDouble("headerHeight",DensityUtil.px2dp(headerHeight));
+                mEventEmitter.receiveEvent(getTargetId(),Events.HEADER_RELEASED.toString(),writableMap);
             }
 
             @Override
@@ -247,7 +249,6 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
             public void onRefresh(RefreshLayout refreshLayout) {
                 mEventEmitter.receiveEvent(getTargetId(),Events.REFRESH.toString(),null);
             }
-
             @Override
             public void onStateChanged(RefreshLayout refreshLayout, RefreshState oldState, RefreshState newState) {
                 switch (newState) {
@@ -256,7 +257,6 @@ public class SmartRefreshLayoutManager extends ViewGroupManager<ReactSmartRefres
                         mEventEmitter.receiveEvent(getTargetId(),Events.PULL_DOWN_TO_REFRESH.toString(),null);
                         break;
                     case Refreshing:
-                        mEventEmitter.receiveEvent(getTargetId(),Events.WILL_REFRESH.toString(),null);
                         break;
                     case ReleaseToRefresh:
                         mEventEmitter.receiveEvent(getTargetId(),Events.RELEASE_TO_REFRESH.toString(),null);
