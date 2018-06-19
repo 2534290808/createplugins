@@ -13,7 +13,6 @@ import {
 } from 'react-native';
 import Switch from "./Switch";
 const {width}=Dimensions.get('window')
-import BaiduSpeech from './BaiduSpeech'
 import RefreshExample from "./Test/RefreshExample";
 import PullRefreshExample from "./Test/PullRefreshExample";
 import LottieExample from "./Test/LottieExample";
@@ -27,7 +26,7 @@ export default class App extends Component<Props> {
   }
   constructor(){
     super();
-    BaiduSpeech.init(AppId,AppKey,AppSecret);
+    //BaiduSpeech.init(AppId,AppKey,AppSecret);
   }
   render() {
     return (

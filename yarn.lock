@@ -3618,6 +3618,12 @@ react-devtools-core@3.0.0:
     shell-quote "^1.6.1"
     ws "^2.0.3"
 
+react-native-indicators@^0.13.0:
+  version "0.13.0"
+  resolved "https://registry.npmjs.org/react-native-indicators/-/react-native-indicators-0.13.0.tgz#001824bba194b1ca6e654d903beaf0168d4e6ac8"
+  dependencies:
+    prop-types "^15.5.10"
+
 react-native-safe-module@^1.1.0:
   version "1.2.0"
   resolved "https://registry.npmjs.org/react-native-safe-module/-/react-native-safe-module-1.2.0.tgz#a23824ca24edc2901913694a76646475113d570d"
